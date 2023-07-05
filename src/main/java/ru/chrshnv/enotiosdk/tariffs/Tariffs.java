@@ -1,6 +1,7 @@
 package ru.chrshnv.enotiosdk.tariffs;
 
 import com.google.gson.annotations.SerializedName;
+import ru.chrshnv.enotiosdk.other.TariffStatus;
 
 import java.util.ArrayList;
 import java.util.Currency;
@@ -42,20 +43,9 @@ public class Tariffs {
 		private String serviceLabel;
 
 		private Currency currency;
-		private String status;
+		private TariffStatus status;
 
 		public Tariff() {
-		}
-
-		public Tariff(Double percent, Double maxSum, Double shopPercent, Double userPercent, String service, String serviceLabel, Currency currency, String status) {
-			this.percent = percent;
-			this.maxSum = maxSum;
-			this.shopPercent = shopPercent;
-			this.userPercent = userPercent;
-			this.service = service;
-			this.serviceLabel = serviceLabel;
-			this.currency = currency;
-			this.status = status;
 		}
 
 		public Double getPercent() {
@@ -114,11 +104,11 @@ public class Tariffs {
 			this.currency = currency;
 		}
 
-		public String getStatus() {
+		public TariffStatus getStatus() {
 			return status;
 		}
 
-		public void setStatus(String status) {
+		public void setStatus(TariffStatus status) {
 			this.status = status;
 		}
 	}

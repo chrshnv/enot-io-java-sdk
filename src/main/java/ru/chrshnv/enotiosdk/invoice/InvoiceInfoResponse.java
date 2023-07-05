@@ -59,4 +59,151 @@ public class InvoiceInfoResponse {
 
 	@SerializedName("paid_at")
 	private Date paidAt;
+
+	public InvoiceInfoResponse() {
+	}
+
+	public UUID getInvoiceId() {
+		return invoiceId;
+	}
+
+	public void setInvoiceId(UUID invoiceId) {
+		this.invoiceId = invoiceId;
+	}
+
+	public String getOrderId() {
+		return orderId;
+	}
+
+	public void setOrderId(String orderId) {
+		this.orderId = orderId;
+	}
+
+	public String getShopId() {
+		return shopId;
+	}
+
+	public void setShopId(String shopId) {
+		this.shopId = shopId;
+	}
+
+	public InvoiceStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(InvoiceStatus status) {
+		this.status = status;
+	}
+
+	public Double getInvoiceAmount() {
+		return invoiceAmount;
+	}
+
+	public void setInvoiceAmount(Double invoiceAmount) {
+		this.invoiceAmount = invoiceAmount;
+	}
+
+	public Double getCredited() {
+		return credited;
+	}
+
+	public void setCredited(Double credited) {
+		this.credited = credited;
+	}
+
+	public Currency getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(Currency currency) {
+		this.currency = currency;
+	}
+
+	public String getPayService() {
+		return payService;
+	}
+
+	public void setPayService(String payService) {
+		this.payService = payService;
+	}
+
+	public String getPayerDetails() {
+		return payerDetails;
+	}
+
+	public void setPayerDetails(String payerDetails) {
+		this.payerDetails = payerDetails;
+	}
+
+	public Double getCommissionAmount() {
+		return commissionAmount;
+	}
+
+	public void setCommissionAmount(Double commissionAmount) {
+		this.commissionAmount = commissionAmount;
+	}
+
+	public Double getCommissionPercent() {
+		return commissionPercent;
+	}
+
+	public void setCommissionPercent(Double commissionPercent) {
+		this.commissionPercent = commissionPercent;
+	}
+
+	public Double getShopCommissionAmount() {
+		return shopCommissionAmount;
+	}
+
+	public void setShopCommissionAmount(Double shopCommissionAmount) {
+		this.shopCommissionAmount = shopCommissionAmount;
+	}
+
+	public Double getUserCommissionAmount() {
+		return userCommissionAmount;
+	}
+
+	public void setUserCommissionAmount(Double userCommissionAmount) {
+		this.userCommissionAmount = userCommissionAmount;
+	}
+
+	public Double getUserCommissionPercent() {
+		return userCommissionPercent;
+	}
+
+	public void setUserCommissionPercent(Double userCommissionPercent) {
+		this.userCommissionPercent = userCommissionPercent;
+	}
+
+	public Map<String, Object> getCustomField() {
+		return customField;
+	}
+
+	public void setCustomField(Map<String, Object> customField) {
+		this.customField = customField;
+	}
+
+	public Date getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
+	}
+
+	public Date getExpiredAt() {
+		return expiredAt;
+	}
+
+	public void setExpiredAt(Date expiredAt) {
+		this.expiredAt = expiredAt;
+	}
+
+	public Date getPaidAt() {
+		return paidAt;
+	}
+
+	public void setPaidAt(Date paidAt) {
+		this.paidAt = paidAt;
+	}
 }
