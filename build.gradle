@@ -22,3 +22,61 @@ test {
 
 apply plugin: 'maven-publish'
 apply plugin: 'signing'
+
+java {
+	withJavadocJar()
+	withSourcesJar()
+}
+
+publishing {
+	publications {
+		maven(MavenPublication) {
+			artifactId = "enot-io-sdk"
+			groupId = "ru.chrshnv"
+			version = "1.0.0"
+			from components.java
+			pom {
+				packaging = "jar"
+				name = "Enot IO SDK"
+				description = "Enot IO SDK for API integration written on Java"
+				licenses {
+					license {
+						license {
+							name = "The Apache License, Version 2.0"
+							url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+						}
+					}
+				}
+
+				scm {
+					connection = "scm:https://github.com/chrshnv/enot-io-java-sdk.git"
+					developerConnection = "scm:git@github.com:chrshnv/enot-io-java-sdk.git"
+					url = "https://github.com/chrshnv/enot-io-java-sdk"
+				}
+
+				developers {
+					developer {
+						id = "chrshnv"
+						name = "Artemiy Degtyarev"
+						email = "chereshnyabtw@icloud.com"
+					}
+				}
+			}
+		}
+	}
+
+	repositories {
+		maven {
+			name = "OSSRH"
+			url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+			credentials {
+				username = ossrhUsername
+				password = ossrhPassword
+			}
+		}
+	}
+}
+
+signing {
+	sign publishing.publications.maven
+}
