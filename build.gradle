@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'ru.chrshnv'
-version = '1.0-SNAPSHOT'
+version = System.getenv('RELEASE_VERSION')
 
 repositories {
     mavenCentral()
@@ -39,6 +39,8 @@ publishing {
 				packaging = "jar"
 				name = "Enot IO SDK"
 				description = "Enot IO SDK for API integration written on Java"
+				url = "https://github.com/chrshnv/enot-io-java-sdk"
+
 				licenses {
 					license {
 						license {
@@ -70,8 +72,8 @@ publishing {
 			name = "OSSRH"
 			url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
 			credentials {
-				username = ossrhUsername
-				password = ossrhPassword
+				username = System.getenv("SONATYPE_USERNAME")
+				password = System.getenv("SONATYPE_PASSWORD")
 			}
 		}
 	}
