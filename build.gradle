@@ -1,6 +1,5 @@
 plugins {
     id 'java'
-	id 'maven-publish'
 }
 
 group = 'ru.chrshnv'
@@ -11,7 +10,6 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.apache.httpcomponents.client5:httpclient5:5.2.1'
 	implementation 'com.google.code.gson:gson:2.10.1'
 
 	testImplementation platform('org.junit:junit-bom:5.9.1')
@@ -21,3 +19,6 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
