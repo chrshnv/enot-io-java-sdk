@@ -13,32 +13,32 @@ public class InvoiceRequest {
 	@SerializedName("order_id")
 	private String orderId;
 
-	private Currency currency = Currency.RUB;
+	private Currency currency;
 
 	@SerializedName("shop_id")
 	private UUID shopId;
 
 	@SerializedName("hook_url")
-	private String hookUrl = null;
+	private String hookUrl;
 
 	@SerializedName("custom_fields")
-	private String customFields = null;
+	private String customFields;
 
-	private String comment = null;
+	private String comment;
 
 	@SerializedName("fail_url")
-	private URI failUrl = null;
+	private URI failUrl;
 
 	@SerializedName("success_url")
-	private URI successUrl = null;
+	private URI successUrl;
 
-	private Integer expire = 300;
+	private Integer expire;
 
 	@SerializedName("include_service")
-	private List<String> includeService = null;
+	private List<String> includeService;
 
 	@SerializedName("exclude_service")
-	private List<String> excludeService = null;
+	private List<String> excludeService;
 
 	public static InvoiceRequestBuilder builder() {
 		return new InvoiceRequestBuilder();
